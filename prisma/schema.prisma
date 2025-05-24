@@ -16,7 +16,7 @@ datasource db {
 
 
 model Autor {
-  id       BigInt  @id @default(autoincrement())
+  id       Int  @id @default(autoincrement())
   nome     String  @db.VarChar(255)
   email    String  @db.VarChar(255)
   telefone String? @db.VarChar(20)
@@ -26,30 +26,30 @@ model Autor {
 
 
 model Livro {
-  id          BigInt   @id @default(autoincrement())
+  id          Int   @id @default(autoincrement())
   titulo      String
   resumo      String?
   ano         Int
   paginas     Int?
   isbn        String
   categoria   Categoria @relation(fields: [categoria_id], references: [id])
-  categoria_id BigInt
+  categoria_id Int
   editora     Editora   @relation(fields: [editora_id], references: [id])
-  editora_id  BigInt
+  editora_id  Int
   autor       Autor     @relation(fields: [autor_id], references: [id])
-  autor_id    BigInt
+  autor_id    Int
 }
 
 
 model Categoria {
-  id    BigInt @id @default(autoincrement())
+  id    Int @id @default(autoincrement())
   nome  String @db.VarChar(50)
   livros Livro[]
 }
 
 
 model Editora {
-  id       BigInt  @id @default(autoincrement())
+  id       Int  @id @default(autoincrement())
   nome     String  @db.VarChar(255)
   endereco String?
   telefone String? @db.VarChar(20)

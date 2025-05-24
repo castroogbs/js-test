@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Autor" (
-    "id" BIGSERIAL NOT NULL,
+    "id" SERIAL NOT NULL,
     "nome" VARCHAR(255) NOT NULL,
     "email" VARCHAR(255) NOT NULL,
     "telefone" VARCHAR(20),
@@ -11,22 +11,22 @@ CREATE TABLE "Autor" (
 
 -- CreateTable
 CREATE TABLE "Livro" (
-    "id" BIGSERIAL NOT NULL,
+    "id" SERIAL NOT NULL,
     "titulo" TEXT NOT NULL,
     "resumo" TEXT,
     "ano" INTEGER NOT NULL,
     "paginas" INTEGER,
     "isbn" TEXT NOT NULL,
-    "categoria_id" BIGINT NOT NULL,
-    "editora_id" BIGINT NOT NULL,
-    "autor_id" BIGINT NOT NULL,
+    "categoria_id" INTEGER NOT NULL,
+    "editora_id" INTEGER NOT NULL,
+    "autor_id" INTEGER NOT NULL,
 
     CONSTRAINT "Livro_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Categoria" (
-    "id" BIGSERIAL NOT NULL,
+    "id" SERIAL NOT NULL,
     "nome" VARCHAR(50) NOT NULL,
 
     CONSTRAINT "Categoria_pkey" PRIMARY KEY ("id")
@@ -34,7 +34,7 @@ CREATE TABLE "Categoria" (
 
 -- CreateTable
 CREATE TABLE "Editora" (
-    "id" BIGSERIAL NOT NULL,
+    "id" SERIAL NOT NULL,
     "nome" VARCHAR(255) NOT NULL,
     "endereco" TEXT,
     "telefone" VARCHAR(20),
