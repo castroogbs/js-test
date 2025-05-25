@@ -1,0 +1,249 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "livraria",
+    "collectionId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+    "dateExported": "2025-05-25T01:10:24.135Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "Autores",
+            "containerId": "",
+            "created": "2025-05-24T21:58:10.862Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f01c99fe-db4c-41aa-9b79-3ee71fa8c16d",
+            "name": "Livros",
+            "containerId": "",
+            "created": "2025-05-24T21:58:18.694Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "ba9239d4-98e0-4394-aefd-3b99402175fa",
+            "name": "Editoras",
+            "containerId": "",
+            "created": "2025-05-24T22:28:22.404Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "df684cf8-3631-46a5-a111-7ae1d4bf41f7",
+            "name": "Users",
+            "containerId": "",
+            "created": "2025-05-25T01:05:19.017Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "fedb6554-c11d-4a82-a208-25d67f15cd53",
+            "name": "Categorias",
+            "containerId": "",
+            "created": "2025-05-24T22:31:26.048Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "c5af5576-6df8-4a8c-9438-75c01766428b",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "f01c99fe-db4c-41aa-9b79-3ee71fa8c16d",
+            "name": "GET Livros",
+            "url": "localhost:3333/livros",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-05-24T21:57:42.733Z",
+            "modified": "2025-05-24T21:57:58.752Z",
+            "headers": []
+        },
+        {
+            "_id": "39663a82-4669-4074-8f56-9e349b07c773",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "GET autores",
+            "url": "localhost:3333/autores",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-05-24T21:58:06.196Z",
+            "modified": "2025-05-24T21:58:30.572Z",
+            "headers": []
+        },
+        {
+            "_id": "736f0de1-a788-40c6-bb75-540a1a2cc254",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "ba9239d4-98e0-4394-aefd-3b99402175fa",
+            "name": "GET Editoras",
+            "url": "localhost:3333/editoras",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-05-24T22:28:22.404Z",
+            "modified": "2025-05-24T22:28:47.819Z",
+            "headers": []
+        },
+        {
+            "_id": "eae4d7a1-d717-4d10-9967-bf5fcc986812",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "fedb6554-c11d-4a82-a208-25d67f15cd53",
+            "name": "GET Categorias",
+            "url": "localhost:3333/categorias",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-05-24T22:31:26.048Z",
+            "modified": "2025-05-24T22:31:45.663Z",
+            "headers": []
+        },
+        {
+            "_id": "4dde4964-377d-4f95-9cd4-b3d84467e2e1",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "POST autores",
+            "url": "localhost:3333/autores",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-05-24T22:15:10.048Z",
+            "modified": "2025-05-24T22:15:49.538Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao@exemplo.com\",\n  \"telefone\": \"31999990000\",\n  \"bio\": \"Autor MG\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "86cf05d3-86ac-4b9c-8874-7669c77ad190",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "f01c99fe-db4c-41aa-9b79-3ee71fa8c16d",
+            "name": "POST Livro",
+            "url": "localhost:3333/livros",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-05-24T22:16:19.732Z",
+            "modified": "2025-05-24T22:16:37.541Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Novo Livro\",\n  \"resumo\": \"Resumo\",\n  \"ano\": 2024,\n  \"paginas\": 250,\n  \"isbn\": \"1234567890\",\n  \"autor_id\": 1,\n  \"categoria_id\": 1,\n  \"editora_id\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3516d20b-fde3-4a43-a044-f1fba9dfa1c2",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "ba9239d4-98e0-4394-aefd-3b99402175fa",
+            "name": "POST Editora",
+            "url": "localhost:3333/editoras",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-05-24T22:28:22.405Z",
+            "modified": "2025-05-25T01:07:18.474Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnYWJyaWVsQGVtYWlsLmNvbSIsImlhdCI6MTc0ODEzNTIwMywiZXhwIjoxNzQ4MTQyNDAzfQ.fPpUb4SkcbeVeVX_uxtSBFuTKFvtUy5m9LaGYKK_Sns",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Editora Exemplo\",\n  \"endereco\": \"Rua dos Livros, 123\",\n  \"telefone\": \"(11) 98888-0000\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a1cc5fa9-d8bc-46c2-b6fe-481df4e24bf8",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "fedb6554-c11d-4a82-a208-25d67f15cd53",
+            "name": "POST Categoria",
+            "url": "localhost:3333/categorias",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-05-24T22:31:26.049Z",
+            "modified": "2025-05-24T22:32:11.639Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Ficção Científica\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bee445e7-0b7e-4e5e-a5fa-147892f7c591",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "PUT autores",
+            "url": "localhost:3333/autores/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-05-25T00:48:35.918Z",
+            "modified": "2025-05-25T00:49:19.697Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Gabriel Novo\",\n  \"email\": \"novo@email.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4cefe065-4efd-4c19-84df-1a5974b82ea0",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "PATCH autores",
+            "url": "localhost:3333/autores/1",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2025-05-25T00:51:26.154Z",
+            "modified": "2025-05-25T00:52:04.576Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"telefone\": \"31982112233\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cdff4312-8376-4759-b8ac-5541c0cb9b35",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "83847600-8ddc-48ae-88c2-c775c74e98fd",
+            "name": "DELETE autor",
+            "url": "localhost:3333/autores/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-05-25T00:52:12.368Z",
+            "modified": "2025-05-25T00:52:24.723Z",
+            "headers": []
+        },
+        {
+            "_id": "e06ce7a6-d481-4fcc-8457-a897153509aa",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "df684cf8-3631-46a5-a111-7ae1d4bf41f7",
+            "name": "POST Register User",
+            "url": "localhost:3333/auth/register",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2025-05-25T01:05:28.988Z",
+            "modified": "2025-05-25T01:06:06.689Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Gabriel\",\n  \"email\": \"gabriel@email.com\",\n  \"senha\": \"teste123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f8a787d5-1f19-4192-a350-e9eadcdd3844",
+            "colId": "f1080396-e541-4b97-b19a-3b1f9f12bb47",
+            "containerId": "df684cf8-3631-46a5-a111-7ae1d4bf41f7",
+            "name": "POST Login",
+            "url": "localhost:3333/auth/login",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2025-05-25T01:06:18.071Z",
+            "modified": "2025-05-25T01:06:43.850Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"gabriel@email.com\",\n  \"senha\": \"teste123\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "DTjiDNeMOoWVdIUdUOPnBSQevfPxxMCiyas8zfVuc9bszgoGV6xObsCFo1YddvAnM0ADrA-sdzW7Xs1HJkz8Fw"
+}

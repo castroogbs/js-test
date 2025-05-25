@@ -6,6 +6,8 @@ import livrosRouter from "./routes/livros";
 import editorasRouter from "./routes/editoras";
 import categoriasRouter from "./routes/categorias";
 import authRouter from "./routes/auth";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSpec } from "./swagger";
 
 
 dotenv.config();
@@ -22,6 +24,7 @@ app.use("/livros", livrosRouter);
 app.use("/editoras", editorasRouter);
 app.use("/categorias", categoriasRouter);
 app.use("/auth", authRouter);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 // Primeira rota de teste:
