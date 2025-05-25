@@ -5,6 +5,7 @@ import autoresRouter from "./routes/autores";
 import livrosRouter from "./routes/livros";
 import editorasRouter from "./routes/editoras";
 import categoriasRouter from "./routes/categorias";
+import authRouter from "./routes/auth";
 
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use("/autores", autoresRouter);
 app.use("/livros", livrosRouter);
 app.use("/editoras", editorasRouter);
 app.use("/categorias", categoriasRouter);
+app.use("/auth", authRouter);
 
 
 // Primeira rota de teste:

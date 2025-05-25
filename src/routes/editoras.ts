@@ -1,5 +1,6 @@
 import { Router } from "express";
 import prisma from "../prisma";
+import { autenticarJWT } from "../middleware/auth";
 const router = Router();
 
 // GET /editoras - Lista todas as editoras
@@ -35,7 +36,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // POST /editoras - Cria nova editora
-router.post("/", async (req, res) => {
+router.post("/", autenticarJWT, async (req, res) => {
   const { nome, endereco, telefone } = req.body;
   if (!nome) {
     res.status(400).json({ erro: "Nome é obrigatório." });

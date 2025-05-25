@@ -55,3 +55,12 @@ model Editora {
   telefone String? @db.VarChar(20)
   livros   Livro[]
 }
+
+model Usuario {
+  id     Int  @id @default(autoincrement())
+  nome   String  @db.VarChar(120)
+  email  String  @unique @db.VarChar(255)
+  senha  String
+  // role String? // Adicione para o desafio de autorização (admin/user)
+}
+
