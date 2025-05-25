@@ -16,5 +16,5 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/prisma ./prisma
 COPY .env ./
 COPY --from=build /app/src ./src
-EXPOSE 3333
+EXPOSE $PORT
 CMD ["sh", "-c", "npx prisma migrate deploy && node dist/index.js"]
