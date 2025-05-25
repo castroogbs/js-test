@@ -2,7 +2,7 @@
 FROM node:20 AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 COPY . .
 RUN npx prisma generate
 # RUN npx swagger-jsdoc -d src/swagger.ts -o dist/swagger.json
