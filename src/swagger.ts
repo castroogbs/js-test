@@ -58,7 +58,11 @@ export const swaggerOptions: swaggerJsdoc.Options = {
         },
       },
     },
-    servers: [{ url: "http://localhost:3333" }],
+    servers: [
+  {
+    url: process.env.NODE_ENV === 'production' ? process.env.PUBLIC_API_URL : 'http://localhost:3333'
+  }
+],
   },
   apis: ["./src/routes/*.ts"], // onde estão seus comentários JSDoc
 };
